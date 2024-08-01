@@ -1,6 +1,6 @@
 const About = () => {
     return (
-      <div id="about" className="section my-5">
+      <div id="aboutpage" className="section my-5">
         <div className="container mx-auto">
           <h2 className="section-title text-center py-4 font-rock-salt text-4xl text-primary">
             About Nissan

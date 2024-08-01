@@ -1,15 +1,27 @@
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import "../app/globals.css";
 
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
-    var menu = document.querySelector(".navbar ul.menu");
-    menu.classList.toggle("active");
+    const menu = document.querySelector(".navbar ul.menu");
+    if (menu) {
+      menu.classList.toggle("active");
+    }
+  };
+
+  const handleLoginClick = () => {
+    const element = document.getElementById("login");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    // Optionally, you can close the menu after clicking on a link
+    setMenuActive(false);
   };
 
   return (
@@ -27,19 +39,19 @@ const Navbar = () => {
             </div>
             <ul className={`menu flex flex-col md:flex-row md:items-center ${menuActive ? 'block' : 'hidden'} md:block`}>
               <li className="md:inline-block my-2 md:my-0 md:ml-4">
-                <Link href="/#aboutpage"  className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md" >
-                 About
-                </Link>
+                <a href="#aboutpage" className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
+                  About
+                </a>
               </li>
               <li className="md:inline-block my-2 md:my-0 md:ml-4">
-                <Link href="#details"  className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
-                 Details
-                </Link>
+                <a href="#details" className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
+                  Details
+                </a>
               </li>
               <li className="md:inline-block my-2 md:my-0 md:ml-4">
-                <Link href="#login" className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
+                <a href="#login" className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
                   Login
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -50,3 +62,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
