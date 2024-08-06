@@ -1,3 +1,5 @@
+
+import Image from 'next/image'
 const About = () => {
     return (
       <div id="aboutpage" className="section my-5">
@@ -20,7 +22,12 @@ const About = () => {
                 </div>
               </div>
               <div className="image-section w-full md:w-1/2 p-4">
-                <img src="/car10.webp" className="w-full" alt="Nissan" />
+              <Image
+      src="/car10.webp"
+      className="w-full"
+      width={500}
+      height={500}
+      alt="Nissan"/>  
               </div>
             </div>
           </div>
