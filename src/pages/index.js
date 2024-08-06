@@ -11,6 +11,13 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
 
 export default function Home() {
   useEffect(() => {
@@ -51,41 +58,44 @@ export default function Home() {
       <Navbar />
       <div className="imagecontainer" id="home">
       <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide>      <Image
+      <SwiperSlide><Image
       src="/nissan-kicks.webp"
+         layout="responsive"
       width={2000}
-      height={700}
-      alt="Picture1"/>  
-      </SwiperSlide>
+      height={1000}
+      alt="Picture1"/></SwiperSlide>
 
-      <SwiperSlide>
-      <Image
+      <SwiperSlide><Image
       src="/swiper2.webp"
+         layout="responsive"
       width={2000}
-      height={700}
-      alt="Picture2"/>  
-      </SwiperSlide>
+      height={1000}
+      alt="Picture2"/>  </SwiperSlide>
 
       <SwiperSlide><Image
       src="/swiper3.webp"
+         layout="responsive"
       width={2000}
-      height={500}
-      alt="Picture3"/>  </SwiperSlide>
+      height={1000}
+      alt="Picture3"/></SwiperSlide>
 
-      <SwiperSlide>
-      <Image
+      <SwiperSlide><Image
       src="/swiper4.webp"
+         layout="responsive"
       width={2000}
-      height={500}
-      alt="Picture4"/>  
-      </SwiperSlide>
-      ...
-    </Swiper>
+      height={1000}
+      alt="Picture4"/>  </SwiperSlide>
+          </Swiper>
 
       </div>
       <About />

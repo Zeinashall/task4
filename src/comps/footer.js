@@ -9,11 +9,11 @@ const Footer = () => {
             <i className="fas fa-map-marker-alt footer-icon text-2xl mr-2"></i>
             <span>Geesthachter Straße 136 C, 21502, Deutschland</span>
           </a>
-          <a className="footer-item flex items-center mb-4 md:mb-0 text-white no-underline transition-colors duration-300 hover:text-[rgb(134,6,6)]">
+          <a href="#" className="footer-item flex items-center mb-4 md:mb-0 text-white no-underline transition-colors duration-300 hover:text-[rgb(134,6,6)]">
             <i className="fas fa-phone footer-icon text-2xl mr-2"></i>
             <span>+49 176-83635728</span>
           </a>
-          <a className="footer-item flex items-center mb-4 md:mb-0 text-white no-underline transition-colors duration-300 hover:text-[rgb(134,6,6)]">
+          <a  href="#"className="footer-item flex items-center mb-4 md:mb-0 text-white no-underline transition-colors duration-300 hover:text-[rgb(134,6,6)]">
             <i className="fas fa-envelope footer-icon text-2xl mr-2"></i>
             <span>zeinaalshal@gmail.com</span>
           </a>

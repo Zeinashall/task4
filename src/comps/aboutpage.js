@@ -8,8 +8,8 @@ const About = () => {
             About Nissan
           </h2>
           <div className="section my-5">
-            <div className="container-about flex flex-col md:flex-row">
-              <div className="content-section w-full md:w-1/2 p-4">
+            <div className="container-about flex grid-template-columns: repeat(2, minmax(0, 1fr)) ">
+              <div className="content-section w-full ">
                 <div className="content">
                   <p className="mt-2 text-lg leading-relaxed mb-5">
                     Nissan has a long history of innovation and excellence in the automotive industry. Founded in 1933, Nissan has been at the forefront of developing groundbreaking vehicles that combine performance, technology, and design.
@@ -21,7 +21,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="image-section w-full md:w-1/2 p-4">
+              <div className="image-section w-full ">
               <Image
       src="/car10.webp"
       className="w-full"

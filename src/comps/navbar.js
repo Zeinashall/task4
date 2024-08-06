@@ -33,22 +33,22 @@ const Navbar = () => {
             <span className="logo-primary text-[rgb(134,6,6)] font-['Rock Salt'] italic mx-1">N</span>issan
             <span className="logo-primary text-[rgb(134,6,6)] font-['Rock Salt'] italic mx-1">V</span>ehicles
           </a>
-          <div className="mobile-menu flex items-center">
+          <div className="mobile-menu flex items-center gap: 0.25rem ">
             <div className="burger-menu menu-toggle text-2xl text-[rgb(134,6,6)] cursor-pointer p-4 md:hidden" onClick={toggleMenu}>
               <i className="fas fa-bars"></i>
             </div>
-            <ul className={`menu flex flex-col md:flex-row md:items-center ${menuActive ? 'block' : 'hidden'} md:block`}>
-              <li className="md:inline-block my-2 md:my-0 md:ml-4">
+            <ul className={`menu flex flex-row md:items-center ${menuActive ? 'block' : 'hidden'} md:block`}>
+            <li className="md:inline-block my-2 md:my-0 ">
                 <a href="#aboutpage" className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
                   About
                 </a>
               </li>
-              <li className="md:inline-block my-2 md:my-0 md:ml-4">
+              <li className="md:inline-block my-2 md:my-0 ">
                 <a href="#details" className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
                   Details
                 </a>
               </li>
-              <li className="md:inline-block my-2 md:my-0 md:ml-4">
+              <li className="md:inline-block my-2 md:my-0 ">
                 <a href="#login" className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md">
                   Login
                 </a>
