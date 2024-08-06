@@ -63,7 +63,7 @@ export default function Home() {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
-          className="h-[768px]" // Set height to double the original (48rem or 768px)
+          className="h-[600px]" 
         >
           <SwiperSlide>
             <div className="relative w-full h-full overflow-hidden">
