@@ -53,7 +53,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="imagecontainer pt-[91px]" id="home">
+      <div className="imagecontainer pt-[91px]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
@@ -63,9 +63,10 @@ export default function Home() {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
+          className="h-[768px]" // Set height to double the original (48rem or 768px)
         >
           <SwiperSlide>
-            <div className="relative w-full h-96 overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden">
               <Image
                 src="/nissan-kicks.webp"
                 layout="fill"
@@ -76,7 +77,7 @@ export default function Home() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="relative w-full h-96 overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden">
               <Image
                 src="/swiper2.webp"
                 layout="fill"
@@ -87,7 +88,7 @@ export default function Home() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="relative w-full h-96 overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden">
               <Image
                 src="/swiper3.webp"
                 layout="fill"
@@ -98,7 +99,7 @@ export default function Home() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="relative w-full h-96 overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden">
               <Image
                 src="/swiper4.webp"
                 layout="fill"
@@ -112,6 +113,8 @@ export default function Home() {
       <About />
       <Details />
       <Login />
+      <Footer />
     </div>
   );
 }
+
