@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import { useEffect } from "react";
 import Navbar from "../comps/navbar";
@@ -7,7 +6,7 @@ import About from "../comps/aboutpage";
 import Details from "../comps/details";
 import Login from "../comps/login";
 import "../app/globals.css";
-import Image from 'next/image'
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -16,8 +15,6 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-
 
 export default function Home() {
   useEffect(() => {
@@ -56,47 +53,61 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="imagecontainer" id="home">
-      <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      <SwiperSlide><Image
-      src="/nissan-kicks.webp"
-         layout="responsive"
-      width={2000}
-      height={1000}
-      alt="Picture1"/></SwiperSlide>
+      <div className="imagecontainer pt-[91px]" id="home">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <SwiperSlide>
+            <div className="relative w-full h-96 overflow-hidden">
+              <Image
+                src="/nissan-kicks.webp"
+                layout="fill"
+                objectFit="cover"
+                alt="Picture1"
+              />
+            </div>
+          </SwiperSlide>
 
-      <SwiperSlide><Image
-      src="/swiper2.webp"
-         layout="responsive"
-      width={2000}
-      height={1000}
-      alt="Picture2"/>  </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-96 overflow-hidden">
+              <Image
+                src="/swiper2.webp"
+                layout="fill"
+                objectFit="cover"
+                alt="Picture2"
+              />
+            </div>
+          </SwiperSlide>
 
-      <SwiperSlide><Image
-      src="/swiper3.webp"
-         layout="responsive"
-      width={2000}
-      height={1000}
-      alt="Picture3"/></SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-96 overflow-hidden">
+              <Image
+                src="/swiper3.webp"
+                layout="fill"
+                objectFit="cover"
+                alt="Picture3"
+              />
+            </div>
+          </SwiperSlide>
 
-      <SwiperSlide><Image
-      src="/swiper4.webp"
-         layout="responsive"
-      width={2000}
-      height={1000}
-      alt="Picture4"/>  </SwiperSlide>
-          </Swiper>
-
+          <SwiperSlide>
+            <div className="relative w-full h-96 overflow-hidden">
+              <Image
+                src="/swiper4.webp"
+                layout="fill"
+                objectFit="cover"
+                alt="Picture4"
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <About />
       <Details />
