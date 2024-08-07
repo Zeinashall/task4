@@ -21,7 +21,6 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    // Optionally, you can close the menu after clicking on a link
     setMenuActive(false);
   };
 
@@ -29,8 +28,8 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-black z-30">
       <div className="container mx-auto">
         <div className="navbar flex justify-between items-center py-4">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="logo text-white flex items-center text-2xl no-underline"
           >
             <Image src="/icon12.png" width={35} height={35} alt="Logo" />
@@ -42,7 +41,7 @@ const Navbar = () => {
               V
             </span>
             ehicles
-          </a>
+          </Link>
           <div className="mobile-menu flex items-center gap: 0.25rem ">
             <div
               className="burger-menu menu-toggle text-2xl text-[rgb(134,6,6)] cursor-pointer p-4 md:hidden"
@@ -65,20 +64,20 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="md:inline-block my-2 md:my-0 ">
-                <a
+                <Link
                   href="/detailspage"
                   className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md"
                 >
                   Details
-                </a>
+                </Link>
               </li>
               <li className="md:inline-block my-2 md:my-0 ">
-                <a
+                <Link
                   href="/loginpage"
                   className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md"
                 >
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import Navbar from "../comps/navbar";
-import Footer from "../comps/footer";
 import About from "../comps/about";
 import Details from "../comps/details";
 import Login from "../comps/login";
