@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Details = () => {
   return (
-    <div id="details" className="section my-10">
+    <div className="section my-10">
       <div className="container mx-auto">
         <h2 className="section-title text-center py-4 font-rock-salt text-4xl text-primary">
           DETAILS!

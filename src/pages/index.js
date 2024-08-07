@@ -2,19 +2,19 @@ import Head from "next/head";
 import { useEffect } from "react";
 import Navbar from "../comps/navbar";
 import Footer from "../comps/footer";
-import About from "../comps/aboutpage";
+import About from "../comps/about";
 import Details from "../comps/details";
 import Login from "../comps/login";
 import "../app/globals.css";
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 export default function Home() {
   useEffect(() => {
@@ -42,7 +42,6 @@ export default function Home() {
         });
       });
     };
-    
   }, []);
 
   return (
@@ -52,7 +51,7 @@ export default function Home() {
         <meta name="description" content="Nissan Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+
       <div className="imagecontainer pt-[91px]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -62,8 +61,8 @@ export default function Home() {
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
-          className="h-[530px]" 
+          onSlideChange={() => console.log("slide change")}
+          className="h-[530px]"
         >
           <SwiperSlide>
             <div className="relative w-full h-full overflow-hidden">
@@ -116,4 +115,3 @@ export default function Home() {
     </div>
   );
 }
-

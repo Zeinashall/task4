@@ -1,7 +1,6 @@
-
 const Login = () => {
   return (
-    <div id="login" className="section py-10">
+    <div className="section py-10">
       <h2 className="section-title text-center py-4 font-rock-salt text-4xl text-primary">
         LOGIN!
       </h2>
