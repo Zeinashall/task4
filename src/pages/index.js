@@ -113,7 +113,6 @@ export default function Home() {
       <About />
       <Details />
       <Login />
-      <Footer />
     </div>
   );
 }
