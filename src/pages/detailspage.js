@@ -1,6 +1,4 @@
-import Head from "next/head";
-import Navbar from "../comps/navbar";
-import Footer from "@/comps/footer";
+
 import CarCard from "../comps/carCard";
 
 const detailspage = () => {

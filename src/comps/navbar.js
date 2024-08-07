@@ -72,10 +72,10 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="md:inline-block my-2 md:my-0 ">
-                <Link
-                  href="/loginpage"
+                <Link href="/loginpage"
                   className="text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md"
                 >
+                  
                   Login
                 </Link>
               </li>

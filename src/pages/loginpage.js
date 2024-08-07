@@ -156,13 +156,13 @@ const loginpage = () => {
                 src="/register.jpg"
                 alt="Vehicle"
                 className="w-full h-full object-cover rounded-lg"
-                style={{ maxHeight: "500px" }} // Adjust the max-height as needed
+                style={{ maxHeight: "500px" }}
               />
               <img
                 src="/register2.jpeg"
                 alt="Vehicle"
                 className="w-full h-full object-cover rounded-lg"
-                style={{ maxHeight: "500px" }} // Adjust the max-height as needed
+                style={{ maxHeight: "500px" }} 
               />
             </div>
           </div>
