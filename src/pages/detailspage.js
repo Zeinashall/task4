@@ -1,4 +1,5 @@
-
+import React from "react";
+import TextWithStyle from "../comps/TextStyle"
 import CarCard from "../comps/carCard";
 
 const detailspage = () => {
@@ -12,7 +13,7 @@ const detailspage = () => {
     },
     {
       id: 2,
-      image: "/details2.webp",
+      image: "/details6.webp",
       name: "Nissan Rogue",
       model: "2023",
       price: "Starting at $28,000",
@@ -40,7 +41,7 @@ const detailspage = () => {
     },
     {
       id: 6,
-      image: "/details6.webp",
+      image: "/details2.webp",
       name: "Nissan Murano",
       model: "2021",
       price: "Starting at $31,000",
@@ -71,6 +72,16 @@ const detailspage = () => {
   return (
     <div>
       <div className="container mx-auto py-12 mt-16">
+      <TextWithStyle
+          fontStyle="font-serif"
+          color="text-orange-500"
+          alignment="text-center"
+          shadow="shadow-lg"
+          size="text-5xl"
+
+        />
+              <div className="h-8"></div>
+
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {cars.map((car) => (
             <CarCard key={car.id} car={car} />

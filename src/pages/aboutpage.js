@@ -1,11 +1,19 @@
-
+import React from "react";
+import TextStyle from "../comps/TextStyle";
 
 export default function AboutPage()  {
   return (
     <div>
 
       <div className="container mx-auto py-12 px-4">
-        <h1 className="text-3xl font-bold text-center mb-8">About Us</h1>
+      <div className="h-16"></div>
+      <TextStyle
+          fontStyle="italic"
+          color="text-gray-600"
+          alignment="text-left"
+          size="text-4xl"
+
+        />
 
         {/* Section 1 */}
         <div className="flex flex-col md:flex-row items-center mb-12 bg-blue-40 p-4 rounded-lg shadow-md hover:bg-gray-200 hover:shadow-lg transition duration-300">

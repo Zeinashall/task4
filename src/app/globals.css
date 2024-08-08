@@ -13,3 +13,9 @@
 body {
   @apply font-sans;
 }
+.active {
+  background-color: rgba(134, 6, 6, 0.8);
+  border-radius: 8px;
+  color: white;
+}
+

@@ -1,4 +1,5 @@
-
+import React from "react";
+import TextWithStyle from "../comps/TextStyle";
 const loginpage = () => {
   return (
     <div>
@@ -166,6 +167,15 @@ const loginpage = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="container mx-auto mt-12">
+          <TextWithStyle
+            fontStyle="font-serif" 
+            color="text-blue-600"  
+            alignment="text-right"
+            size="text-5xl"        
+            hoverColor="hover:text-gray-300" // Hover effect
+          />
         </div>
       </div>
     </div>
