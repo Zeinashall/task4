@@ -12,6 +12,9 @@ export default function AboutPage()  {
           color="text-gray-600"
           alignment="text-left"
           size="text-4xl"
+          shadow="shadow-lg"
+
+          hoverColor="hover:text-blue-400" 
 
         />
 

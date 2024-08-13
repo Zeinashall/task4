@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import About from "../comps/about";
 import Details from "../comps/details";
 import Login from "../comps/login";
@@ -15,33 +14,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export default function Home() {
-  useEffect(() => {
-    const anchors = document.querySelectorAll(".menu a");
-    anchors.forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth",
-          });
-        }
-      });
-    });
-
-    return () => {
-      anchors.forEach((anchor) => {
-        anchor.removeEventListener("click", function (e) {
-          e.preventDefault();
-        });
-      });
-    };
-  }, []);
-
   return (
     <div>
       <Head>

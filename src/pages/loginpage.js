@@ -174,7 +174,7 @@ const loginpage = () => {
             color="text-blue-600"  
             alignment="text-right"
             size="text-5xl"        
-            hoverColor="hover:text-gray-300" // Hover effect
+            hoverColor="hover:text-gray-300" 
           />
         </div>
       </div>

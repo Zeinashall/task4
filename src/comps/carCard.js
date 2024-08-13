@@ -1,10 +1,23 @@
-// components/carCard.js
+// components/CarCard.js
 import React from "react";
+import clsx from "clsx";
 
-const CarCard = ({ car }) => {
+const CarCard = ({ car, isHighlighted }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-200 transition duration-300 flex flex-col items-center">
-      <img src={car.image} alt={car.name} className="w-full h-40 object-cover mb-4" />
+    <div
+      className={clsx(
+        "bg-white p-4 rounded-lg shadow-md transition duration-300 flex flex-col items-center",
+        {
+          "hover:shadow-lg hover:bg-orange-200": !isHighlighted, 
+          "shadow-lg bg-gray-300": isHighlighted,             
+        }
+      )}
+    >
+      <img
+        src={car.image}
+        alt={car.name}
+        className="w-full h-40 object-cover mb-4"
+      />
       <div className="text-center">
         <h2 className="text-xl font-bold">{car.name}</h2>
         <p className="text-gray-600 mb-2">{car.model}</p>
