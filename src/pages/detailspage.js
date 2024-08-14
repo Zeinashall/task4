@@ -16,10 +16,11 @@ const Detailspage = () => {
     { id: 9, image: "/details9.webp", name: "Nissan Frontier", model: "2022", price: "Starting at $27,000" },
   ];
 
-  const [highlightedModels, setHighlightedModels] = useState([]);
+  const [filteredCars, setFilteredCars] = useState(cars);
 
   const handleModelSelection = (models) => {
-    setHighlightedModels(models);
+    const filtered = cars.filter((car) => models.includes(car.model));
+    setFilteredCars(filtered);
   };
 
   return (
@@ -37,11 +38,11 @@ const Detailspage = () => {
         <ModelSelector onChoose={handleModelSelection} />
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
-          {cars.map((car) => (
+          {filteredCars.map((car) => (
             <CarCard
               key={car.id}
               car={car}
-              isHighlighted={highlightedModels.includes(car.model)}
+              isHighlighted={true}  
             />
           ))}
         </div>

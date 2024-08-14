@@ -35,21 +35,21 @@ const Navbar = () => {
               <i className="fas fa-bars"></i>
             </div>
             <ul className={`menu flex flex-row md:items-center ${menuActive ? "block" : "hidden"} md:block`}>
-              <li className="md:inline-block my-2 md:my-0">
+              <li className="md:inline-block my-2 md:my-0 md:mx-3">
                 <Link href="/aboutpage" passHref>
                   <span className={`text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive("/aboutpage")}`}>
                     About
                   </span>
                 </Link>
               </li>
-              <li className="md:inline-block my-2 md:my-0">
+              <li className="md:inline-block my-2 md:my-0 md:mx-3">
                 <Link href="/detailspage" passHref>
                   <span className={`text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive("/detailspage")}`}>
                     Details
                   </span>
                 </Link>
               </li>
-              <li className="md:inline-block my-2 md:my-0">
+              <li className="md:inline-block my-2 md:my-0 md:mx-3">
                 <Link href="/loginpage" passHref>
                   <span className={`text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive("/loginpage")}`}>
                     Login

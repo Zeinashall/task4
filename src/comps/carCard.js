@@ -1,4 +1,3 @@
-// components/CarCard.js
 import React from "react";
 import clsx from "clsx";
 
@@ -8,8 +7,8 @@ const CarCard = ({ car, isHighlighted }) => {
       className={clsx(
         "bg-white p-4 rounded-lg shadow-md transition duration-300 flex flex-col items-center",
         {
-          "hover:shadow-lg hover:bg-gray-300": !isHighlighted, 
-          "shadow-lg bg-purple-300": isHighlighted,             
+          "hover:shadow-lg hover:bg-gray-200": isHighlighted, 
+          "bg-transparent": isHighlighted, 
         }
       )}
     >
