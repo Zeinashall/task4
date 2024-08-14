@@ -3,7 +3,7 @@ import TextWithStyle from "../comps/TextStyle";
 import CarCard from "../comps/carCard";
 import ModelSelector from "../comps/ModelSelector";
 
-const detailspage = () => {
+const Detailspage = () => {
   const cars = [
     { id: 1, image: "/details1.webp", name: "Nissan Altima", model: "2024", price: "Starting at $25,000" },
     { id: 2, image: "/details6.webp", name: "Nissan Rogue", model: "2023", price: "Starting at $28,000" },
@@ -50,4 +50,4 @@ const detailspage = () => {
   );
 };
 
-export default detailspage;
+export default Detailspage;
