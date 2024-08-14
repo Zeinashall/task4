@@ -1,6 +1,7 @@
 import React from "react";
 import TextWithStyle from "../comps/TextStyle";
-const loginpage = () => {
+
+const LoginPage = () => {
   return (
     <div>
       <div className="container mx-auto py-16 mt-24">
@@ -163,18 +164,17 @@ const loginpage = () => {
                 src="/register2.jpeg"
                 alt="Vehicle"
                 className="w-full h-full object-cover rounded-lg"
-                style={{ maxHeight: "500px" }} 
+                style={{ maxHeight: "500px" }}
               />
             </div>
           </div>
         </div>
         <div className="container mx-auto mt-12">
           <TextWithStyle
-            fontStyle="font-serif" 
-            color="text-blue-600"  
+            fontStyle="font-serif"
+            color="text-blue-600"
             alignment="text-right"
-            size="text-5xl"        
-            hoverColor="hover:text-gray-300" 
+            size="text-5xl"
           />
         </div>
       </div>
@@ -182,4 +182,5 @@ const loginpage = () => {
   );
 };
 
-export default loginpage;
+export default LoginPage;
+
