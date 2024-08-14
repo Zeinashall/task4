@@ -9,7 +9,7 @@ const CarCard = ({ car, isHighlighted }) => {
         "bg-white p-4 rounded-lg shadow-md transition duration-300 flex flex-col items-center",
         {
           "hover:shadow-lg hover:bg-gray-300": !isHighlighted, 
-          "shadow-lg bg-gray-400": isHighlighted,             
+          "shadow-lg bg-purple-200": isHighlighted,             
         }
       )}
     >
