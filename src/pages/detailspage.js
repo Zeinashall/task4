@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextWithStyle from "../comps/TextStyle";
+import TextStyle from "../comps/TextStyle";
 import CarCard from "../comps/carCard";
 import ModelSelector from "../comps/ModelSelector";
 
@@ -26,7 +26,7 @@ const Detailspage = () => {
   return (
     <div>
       <div className="container mx-auto py-12 mt-16">
-        <TextWithStyle
+        <TextStyle
           fontStyle="font-serif"
           color="text-orange-500"
           alignment="text-center"
