@@ -10,7 +10,6 @@ import 'swiper/css/scrollbar';
 import Image from "next/image";
 
 export default function AboutPage() {
-
   const sections = [
     {
       title: "Revolution in Travel",
@@ -70,6 +69,16 @@ export default function AboutPage() {
                 />
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/details7.webp"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Picture1"
+                />
+              </div>
+            </SwiperSlide>
 
             <SwiperSlide>
               <div className="relative w-full h-full overflow-hidden">
@@ -103,7 +112,7 @@ export default function AboutPage() {
                 />
               </div>
             </SwiperSlide>
-          </Swiper>
+                      </Swiper>
         </div>
         <div className="h-6"></div>
 

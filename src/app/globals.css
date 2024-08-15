@@ -24,22 +24,54 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: darkred !important;
+  background-color: transparent !important;
 }
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: transparent !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: transparent !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: transparent !important;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: url('/arrow.webp'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px; 
+  height: 200px; 
+}
+
+.swiper-button-next {
+  right: 10px; 
+}
+
+.swiper-button-prev {
+  left: 10px; 
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
 .swiper-pagination-bullet {
   background-color: red !important;
 }
 
 .swiper-pagination-bullet-active {
   background-color: darkred !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: red !important;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: darkred !important;
 }
