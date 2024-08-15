@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   @apply m-0 p-0 box-border;
 }
@@ -13,6 +12,7 @@
 body {
   @apply font-sans;
 }
+
 .active {
   background-color: rgba(134, 6, 6, 0.8);
   border-radius: 8px;
@@ -24,26 +24,8 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: transparent !important;
+  background-color: darkred !important;
 }
-.swiper-pagination-bullet {
-  background-color: transparent !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: transparent !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: transparent !important;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: transparent !important;
-}
-
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -51,27 +33,21 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 300px; 
-  height: 200px; 
+  width: 300px;
+  height: 200px;
+  color: transparent !important; 
 }
 
 .swiper-button-next {
-  right: 10px; 
+  right: 10px;
 }
 
 .swiper-button-prev {
-  left: 10px; 
+  left: 10px;
+  transform: rotate(180deg); 
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background-color: rgba(0, 0, 0, 0.5); 
-}
-
-.swiper-pagination-bullet {
-  background-color: red !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: darkred !important;
 }
