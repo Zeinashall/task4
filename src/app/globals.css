@@ -19,13 +19,27 @@ body {
   color: white;
 }
 
-/* Add this to your global stylesheet or in a CSS module */
-.swiper-button-prev,
-.swiper-button-next {
-  color: #f87171; /* Red color */
+.swiper-pagination-bullet {
+  background-color: red !important;
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  color: #dc2626; /* Darker red on hover */
+.swiper-pagination-bullet-active {
+  background-color: darkred !important;
+}
+.swiper-pagination-bullet {
+  background-color: red !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: darkred !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: red !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: darkred !important;
 }
