@@ -19,3 +19,13 @@ body {
   color: white;
 }
 
+/* Add this to your global stylesheet or in a CSS module */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f87171; /* Red color */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #dc2626; /* Darker red on hover */
+}

@@ -2,8 +2,9 @@ import React from "react";
 import TextStyle from "../comps/TextStyle";
 import AboutContent from "../comps/AboutContent";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules'; 
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'; 
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Image from "next/image";
@@ -43,82 +44,69 @@ export default function AboutPage() {
 
   return (
     <div>
-      <div className="h-24"></div>
-      <div className="imagecontainer pt-6">
-        <Swiper
-          modules={[Pagination, Scrollbar, A11y, Autoplay]} 
-          spaceBetween={30}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} 
-          className="h-[530px] rounded-lg shadow-lg" 
-        >
-          <SwiperSlide>
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src="/details8.webp
-                "
-                layout="fill"
-                objectFit="cover"
-                alt="Picture1"
-                className="rounded-lg" 
-              />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src="/img4.png"
-                layout="fill"
-                objectFit="cover"
-                alt="Picture2"
-                className="rounded-lg"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src="/about4.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Picture2"
-                className="rounded-lg"
-              />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src="/pic2.png"
-                layout="fill"
-                objectFit="cover"
-                alt="Picture3"
-                className="rounded-lg"
-              />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src="/swiper4.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Picture4"
-                className="rounded-lg"
-              />
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-
-      
       <div className="container mx-auto py-12 px-4">
-        <div className="h-16"></div>
+        <div className="h-20"></div>
+
+        {/* Swiper container */}
+        <div className="swiper-container mb-6"> 
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]} 
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+            className="h-[530px]"
+          >
+            <SwiperSlide>
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/details7.webp"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Picture1"
+                />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/details2.webp"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Picture2"
+                />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/swiper3.webp"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Picture3"
+                />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/swiper4.webp"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Picture4"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="h-6"></div>
+
         <TextStyle
           fontStyle="italic"
           color="text-gray-600"
