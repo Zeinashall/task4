@@ -1,12 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import TextWithStyle from "../comps/TextStyle";
-import Accordion from "../comps/Accordion"; 
+import Accordion from "../comps/Accordion";
 
 const loginpage = () => {
+  const [formData, setFormData] = useState({
+    expectedPrice: '',
+    year: '',
+    make: '',
+    model: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    dutyStation: '',
+    hearAboutUs: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.year.trim()) newErrors.year = "Year is required";
+    if (!formData.make.trim()) newErrors.make = "Make is required";
+    if (!formData.model.trim()) newErrors.model = "Model is required";
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+    if (!formData.dutyStation.trim()) newErrors.dutyStation = "Duty Station is required";
+    if (!formData.hearAboutUs.trim()) newErrors.hearAboutUs = "This field is required";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      // Proceed with form submission (e.g., send data to a server)
+      console.log("Form submitted successfully", formData);
+    } else {
+      console.log("Form has errors", errors);
+    }
+  };
+
   return (
     <div>
       <div className="h-20"></div>
-      
+
       <div className="container mx-auto py-16 mt-24">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold font-serif">
@@ -27,11 +77,10 @@ const loginpage = () => {
                 About Your Vehicle
               </h2>
 
-              {/* Add Accordion components here */}
-              <Accordion 
+              <Accordion
                 title="Vehicle Information"
                 content={
-                  <form className="space-y-6 font-serif">
+                  <form className="space-y-6 font-serif" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
                         <label className="block font-medium mb-2">
@@ -39,6 +88,9 @@ const loginpage = () => {
                         </label>
                         <input
                           type="text"
+                          name="expectedPrice"
+                          value={formData.expectedPrice}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
                       </div>
@@ -48,8 +100,12 @@ const loginpage = () => {
                         </label>
                         <input
                           type="text"
+                          name="year"
+                          value={formData.year}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.year && <p className="text-red-500 text-sm">{errors.year}</p>}
                       </div>
                       <div>
                         <label className="block font-medium mb-2">
@@ -57,8 +113,12 @@ const loginpage = () => {
                         </label>
                         <input
                           type="text"
+                          name="make"
+                          value={formData.make}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.make && <p className="text-red-500 text-sm">{errors.make}</p>}
                       </div>
                       <div>
                         <label className="block font-medium mb-2">
@@ -66,14 +126,21 @@ const loginpage = () => {
                         </label>
                         <input
                           type="text"
+                          name="model"
+                          value={formData.model}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.model && <p className="text-red-500 text-sm">{errors.model}</p>}
                       </div>
                       <div className="sm:col-span-2">
                         <label className="block font-medium mb-2">
                           Notes or Highlights About Your Vehicle:
                         </label>
                         <textarea
+                          name="notes"
+                          value={formData.notes}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                           rows="4"
                         ></textarea>
@@ -84,6 +151,8 @@ const loginpage = () => {
                         </label>
                         <input
                           type="file"
+                          name="photos"
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                           multiple
                         />
@@ -93,7 +162,7 @@ const loginpage = () => {
                 }
               />
 
-              <Accordion 
+              <Accordion
                 title="Contact Details"
                 content={
                   <form className="space-y-6 font-serif">
@@ -104,8 +173,12 @@ const loginpage = () => {
                         </label>
                         <input
                           type="text"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
                       </div>
                       <div>
                         <label className="block font-medium mb-2">
@@ -113,8 +186,12 @@ const loginpage = () => {
                         </label>
                         <input
                           type="text"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
                       </div>
                       <div>
                         <label className="block font-medium mb-2">
@@ -122,8 +199,12 @@ const loginpage = () => {
                         </label>
                         <input
                           type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                       </div>
                       <div>
                         <label className="block font-medium mb-2">
@@ -131,8 +212,12 @@ const loginpage = () => {
                         </label>
                         <input
                           type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
                       </div>
                       <div>
                         <label className="block font-medium mb-2">
@@ -140,18 +225,25 @@ const loginpage = () => {
                         </label>
                         <input
                           type="text"
+                          name="dutyStation"
+                          value={formData.dutyStation}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.dutyStation && <p className="text-red-500 text-sm">{errors.dutyStation}</p>}
                       </div>
                       <div className="sm:col-span-2">
                         <label className="block font-medium mb-2">
-                          How did you hear about us?
-                          <span className="text-red-500">*</span>:
+                          How did you hear about us?<span className="text-red-500">*</span>:
                         </label>
                         <input
                           type="text"
+                          name="hearAboutUs"
+                          value={formData.hearAboutUs}
+                          onChange={handleInputChange}
                           className="w-full p-2 border border-gray-300 rounded-md"
                         />
+                        {errors.hearAboutUs && <p className="text-red-500 text-sm">{errors.hearAboutUs}</p>}
                       </div>
                     </div>
                   </form>
@@ -159,7 +251,7 @@ const loginpage = () => {
               />
 
               <button
-                type="submit"
+                onClick={handleSubmit}
                 className="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md"
               >
                 Submit
@@ -176,7 +268,7 @@ const loginpage = () => {
                 src="/register2.jpeg"
                 alt="Vehicle"
                 className="w-full h-full object-cover rounded-lg"
-                style={{ maxHeight: "500px" }} 
+                style={{ maxHeight: "500px" }}
               />
             </div>
           </div>
@@ -184,11 +276,11 @@ const loginpage = () => {
 
         <div className="container mx-auto mt-12">
           <TextWithStyle
-            fontStyle="font-serif" 
-            color="text-blue-600"  
+            fontStyle="font-serif"
+            color="text-blue-600"
             alignment="text-right"
-            size="text-5xl"        
-            hoverColor="hover:text-gray-300" 
+            size="text-5xl"
+            hoverColor="hover:text-gray-300"
           />
         </div>
       </div>
