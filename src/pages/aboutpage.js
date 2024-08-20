@@ -44,7 +44,8 @@ export default function AboutPage() {
   return (
     <div>
       <div className="container mx-auto py-12 px-4">
-        <div className="h-20"></div>
+      <div className="h-40 md:h-20 lg:h-20"></div>
+
 
         {/* Swiper container */}
         <div className="swiper-container mb-6"> 

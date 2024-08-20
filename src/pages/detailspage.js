@@ -25,6 +25,8 @@ const Detailspage = () => {
 
   return (
     <div>
+<div className="h-48 md:h-20 lg:h-20"></div>
+
       <div className="container mx-auto py-12 mt-16">
         <TextStyle
           fontStyle="font-serif"
