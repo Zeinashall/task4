@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TextWithStyle from "../comps/TextStyle";
 import Accordion from "../comps/Accordion";
 
-const loginpage = () => {
+const LoginPage = () => {
   const [formData, setFormData] = useState({
     expectedPrice: '',
     year: '',
@@ -14,15 +14,25 @@ const loginpage = () => {
     phone: '',
     dutyStation: '',
     hearAboutUs: '',
+    notes: '', // Added to match the form field
+    photos: [] // Added to match the file input
   });
 
   const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value, type, files } = e.target;
+    if (type === 'file') {
+      setFormData({
+        ...formData,
+        [name]: files
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const validateForm = () => {
@@ -287,4 +297,4 @@ const loginpage = () => {
   );
 };
 
-export default loginpage;
+export default LoginPage;
