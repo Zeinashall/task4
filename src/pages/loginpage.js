@@ -14,11 +14,12 @@ const LoginPage = () => {
     phone: '',
     dutyStation: '',
     hearAboutUs: '',
-    notes: '', // Added to match the form field
-    photos: [] // Added to match the file input
+    notes: '',
+    photos: []
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false); // New state for tracking submission
 
   const handleInputChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -56,11 +57,24 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
+      // Simulate form submission and then set submission state
       console.log("Form submitted successfully", formData);
+      setIsSubmitted(true);
     } else {
       console.log("Form has errors", errors);
     }
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen flex flex-col justify-center py-16">
+        <div className="container mx-auto text-center">
+          <h1 className="text-3xl font-bold font-serif mb-6">Thank You!</h1>
+          <p className="text-xl font-semibold mt-4 font-serif">Your submission has been received. We will get back to you shortly.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
