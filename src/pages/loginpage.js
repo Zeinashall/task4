@@ -1,6 +1,6 @@
 import React from "react";
 import TextWithStyle from "../comps/TextStyle";
-import Accordion from "../comps/Accordion"; // Import the Accordion component
+import Accordion from "../comps/Accordion"; 
 
 const loginpage = () => {
   return (
