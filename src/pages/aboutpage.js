@@ -42,15 +42,14 @@ export default function AboutPage() {
   ];
 
   return (
-    <div>
-      <div className="container mx-auto py-12 px-4">
-      <div className="h-40 md:h-20 lg:h-20"></div>
-
+    <div className="px-4 md:px-0" >
+      <div className="container mx-auto py-12">
+        <div className="h-40 md:h-20 lg:h-20"></div>
 
         {/* Swiper container */}
-        <div className="swiper-container mb-6"> 
+        <div className="swiper-container mb-6">
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]} 
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
             navigation
@@ -80,7 +79,6 @@ export default function AboutPage() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -91,7 +89,6 @@ export default function AboutPage() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -102,7 +99,6 @@ export default function AboutPage() {
                 />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -113,7 +109,7 @@ export default function AboutPage() {
                 />
               </div>
             </SwiperSlide>
-                      </Swiper>
+          </Swiper>
         </div>
         <div className="h-6"></div>
 

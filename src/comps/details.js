@@ -8,7 +8,7 @@ const Details = () => {
         <h2 className="section-title text-center py-4 font-rock-salt text-4xl text-primary">
           DETAILS!
         </h2>
-        <div className="card-container grid grid-cols-3 gap-5 justify-center">
+        <div className="card-container grid grid-cols-1 md:grid-cols-3 gap-5 justify-center">
           <Link href="#" className="card bg-white rounded-lg shadow-md overflow-hidden hover:bg-stone-400">
             <div className="classpic">
               <Image
@@ -43,7 +43,13 @@ const Details = () => {
 
           <Link href="#" className="card bg-white rounded-lg shadow-md overflow-hidden hover:bg-stone-400">
             <div className="classpic">
-              <img src="/nissan3.webp" alt="Image 3" className="w-full h-52 object-cover" />
+              <Image
+                src="/nissan3.webp"
+                className="w-full h-52 object-cover"
+                width={500}
+                height={500}
+                alt="Image 3"
+              />
             </div>
             <div className="card-content p-5">
               <h3 className="text-xl mb-2">Nissan Rogue</h3>

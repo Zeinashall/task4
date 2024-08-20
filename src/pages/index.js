@@ -6,16 +6,14 @@ import "../app/globals.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="px-4 md:px-0">
       <Head>
         <title>Nissan Website</title>
         <meta name="description" content="Nissan Website" />
@@ -79,6 +77,7 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
       </div>
+
       <About />
       <Details />
       <Login />

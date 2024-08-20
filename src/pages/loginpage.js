@@ -80,7 +80,7 @@ const LoginPage = () => {
     <div className="h-40 md:h-20 lg:h-20"></div>
 
 
-      <div className="container mx-auto py-16 mt-24">
+      <div className="container mx-auto py-16 mt-24  px-4 md:px-0">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold font-serif">
             Sell Your Car The Easy Way!

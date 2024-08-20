@@ -24,10 +24,10 @@ const Detailspage = () => {
   };
 
   return (
-    <div>
-<div className="h-48 md:h-20 lg:h-20"></div>
+    <div >
+<div className="h-48 md:h-20 lg:h-20 " ></div>
 
-      <div className="container mx-auto py-12 mt-16">
+      <div className="container mx-auto py-12 mt-16 px-4 md:px-0">
         <TextStyle
           fontStyle="font-serif"
           color="text-orange-500"
