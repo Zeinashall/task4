@@ -46,7 +46,6 @@ const loginpage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Proceed with form submission (e.g., send data to a server)
       console.log("Form submitted successfully", formData);
     } else {
       console.log("Form has errors", errors);
