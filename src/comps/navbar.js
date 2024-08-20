@@ -11,10 +11,6 @@ const Navbar = () => {
     setMenuActive(!menuActive);
   };
 
-  const handleLoginClick = () => {
-    setMenuActive(false);
-  };
-
   const isActive = (href) => {
     return router.pathname === href ? "active" : "";
   };
@@ -34,24 +30,40 @@ const Navbar = () => {
             <div className="burger-menu menu-toggle text-2xl text-[rgb(134,6,6)] cursor-pointer p-4 md:hidden" onClick={toggleMenu}>
               <i className="fas fa-bars"></i>
             </div>
-            <ul className={`menu flex flex-row md:items-center ${menuActive ? "block" : "hidden"} md:block`}>
-              <li className="md:inline-block my-2 md:my-0 md:mx-3">
+            <ul
+              className={`menu ${
+                menuActive ? "flex" : "hidden"
+              } flex-col md:flex md:flex-row md:items-center bg-black md:bg-transparent w-full md:w-auto absolute md:relative top-16 left-0 md:top-0 md:left-0 md:static z-20 md:z-auto`}
+            >
+              <li className="my-2 md:my-0 md:mx-3">
                 <Link href="/aboutpage" passHref>
-                  <span className={`text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive("/aboutpage")}`}>
+                  <span
+                    className={`text-white text-xl no-underline p-4 block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive(
+                      "/aboutpage"
+                    )}`}
+                  >
                     About
                   </span>
                 </Link>
               </li>
-              <li className="md:inline-block my-2 md:my-0 md:mx-3">
+              <li className="my-2 md:my-0 md:mx-3">
                 <Link href="/detailspage" passHref>
-                  <span className={`text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive("/detailspage")}`}>
+                  <span
+                    className={`text-white text-xl no-underline p-4 block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive(
+                      "/detailspage"
+                    )}`}
+                  >
                     Details
                   </span>
                 </Link>
               </li>
-              <li className="md:inline-block my-2 md:my-0 md:mx-3">
+              <li className="my-2 md:my-0 md:mx-3">
                 <Link href="/loginpage" passHref>
-                  <span className={`text-white text-xl no-underline p-4 block md:inline-block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive("/loginpage")}`}>
+                  <span
+                    className={`text-white text-xl no-underline p-4 block hover:bg-[rgb(134,6,6)] hover:rounded-lg hover:cursor-pointer hover:shadow-md ${isActive(
+                      "/loginpage"
+                    )}`}
+                  >
                     Login
                   </span>
                 </Link>
@@ -65,4 +77,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

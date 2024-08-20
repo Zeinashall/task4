@@ -19,7 +19,7 @@ const LoginPage = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false); // New state for tracking submission
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -57,7 +57,6 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Simulate form submission and then set submission state
       console.log("Form submitted successfully", formData);
       setIsSubmitted(true);
     } else {
@@ -78,7 +77,8 @@ const LoginPage = () => {
 
   return (
     <div>
-      <div className="h-20"></div>
+    <div className="h-40 md:h-20 lg:h-20"></div>
+
 
       <div className="container mx-auto py-16 mt-24">
         <div className="text-center mb-12">
